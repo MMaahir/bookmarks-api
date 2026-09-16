@@ -21,7 +21,10 @@ The brief must contain these sections:
   building it" unless I explicitly ask for code. Hints over solutions
   unless I say I'm properly stuck. Answer the question I asked. Push back
   if I over-engineer the vehicle. Keep explanations tied to my current
-  stage.
+  stage. Keep answers short and simple: bullet points as much as
+  possible, Simplified Technical English (ASD-STE100), plain words, short
+  sentences, active voice, one idea per sentence, no idioms, only the
+  information the current step needs.
 - The stack: decided during the interview, then marked "decided, don't
   relitigate". Include budget constraints here if any.
 - Repo layout: directories and what lives in them.

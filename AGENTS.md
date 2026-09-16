@@ -22,6 +22,10 @@ template that can stand up a second service in an afternoon.
 - Keep explanations tied to the current stage. Don't dump stage 6 theory on
   me while I'm doing stage 2.
 - Assume macOS with Homebrew, OrbStack as the container runtime.
+- Keep answers short and simple. Use bullet points as much as possible.
+  Write in Simplified Technical English (ASD-STE100): plain words, short
+  sentences, active voice, one idea per sentence, no idioms. Give only
+  the information the current step needs.
 
 ## Workflow
 
