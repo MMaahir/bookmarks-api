@@ -17,6 +17,9 @@ template that can stand up a second service in an afternoon.
 - If I'm stuck on a learning moment, give a hint or the specific line, not the
   whole solution. If I say I'm properly stuck, give the full fix.
 - Answer the question I asked. Don't refactor or expand scope unasked.
+- When I say I'm starting an issue, end your kickoff response with one
+  line reminding me to audit it: check your guidance against the issue's
+  acceptance criteria before I write any code.
 - Push back if I over-engineer the app itself. Boring app, interesting
   platform.
 - Keep explanations tied to the current stage. Don't dump stage 6 theory on
@@ -30,7 +33,7 @@ template that can stand up a second service in an afternoon.
 ## Workflow
 
 Each stage runs through Matt Pocock's skills: grill the plan, capture it as a
-spec (to-spec), break it into tracer-bullet tickets (to-tickets), implement,
+spec (to-spec), break it into tracer-bullet issues (to-tickets), implement,
 code-review the diff, then retro. One deliberate change to the default flow:
 the implement phase is mine. I write the code myself; the agent hints,
 unblocks, and reviews.
@@ -41,12 +44,14 @@ The point of writing my own code is instinct: I want to reach for the
 production-standard structure without being told. System design, repo layout,
 code style, config, tests, observability. So during implement:
 
-- Before I start a ticket, give me an orientation: how this piece is
+- Before I start an issue, give me an orientation: how this piece is
   typically built in production codebases, what the standard shape is, and
   why that shape won. Short, tied to the current stage.
 - Assign reading, not a library tour: one to three primary sources per
   concept (official docs, a seminal post, a real repo worth imitating).
-  Real production code counts as reading.
+  Real production code counts as reading. Put each assignment inline,
+  at the step where the reader needs it, with one line on what it
+  documents. No reading lists at the end.
 - Hints carry the principle. Don't just point at the line; name the general
   rule it breaks, so the same hint never needs repeating. Define new terms
   the first time they appear.
@@ -65,7 +70,7 @@ reviews are the agent's output. The code files are mine.
 
 ### Journal
 
-After each ticket or feature is implemented and reviewed, the agent writes
+After each issue or feature is implemented and reviewed, the agent writes
 a journal entry at `docs/journal/NNNN-slug.md`, numbered from 0001, using
 the template at `docs/journal/TEMPLATE.md`. The entry records what was
 built, why it exists, how it went together, and the thought process: the
@@ -83,6 +88,9 @@ later stage, point at the entry where it first appeared.
 ### Issue tracker
 
 Issues live in this repo's GitHub Issues, driven by the `gh` CLI. See `docs/agents/issue-tracker.md`.
+
+The GitHub issue number is the only work-item numbering. Refer to work by
+issue number. Titles carry no separate sequence, so no "Ticket N" prefixes.
 
 ### Triage labels
 
@@ -163,6 +171,10 @@ anything changes in the cluster.
 
 ## Conventions
 
+- One branch per issue, branched from main: `issue-<n>-<slug>`, created
+  when the issue starts.
+- No direct pushes to main. Open a PR with `gh pr create`; I review it on
+  GitHub and merge it myself.
 - Everything in Git, including Terraform and manifests.
 - Never change infrastructure by hand once Terraform owns it.
 - No `latest` image tags; CI pins digests or version tags.

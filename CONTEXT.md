@@ -14,3 +14,10 @@ _Avoid_: link, favorite, saved page
 **Title**:
 The human-given name of a Bookmark. Optional.
 _Avoid_: label, name
+
+## Conventions
+
+**Test placement**:
+Tests colocate in `src/`, one `*.test.ts` beside the file it tests,
+`src/app.test.ts` beside `src/app.ts`. Same layout as Hono's own repo.
+Chosen over a root `test/` directory on 2026-09-16. Never mix the two.

@@ -1,8 +1,8 @@
-# NNNN: <ticket title>
+# NNNN: <issue title>
 
 - Date:
 - Stage:
-- Ticket: #<n>
+- Issue: #<n>
 - ADRs: <links, or "none">
 
 ## What was built
@@ -27,7 +27,7 @@ rather than in chat gets amended in by hand.
 
 ## Patterns and principles
 
-Each principle that came up this ticket, one line each, named. Terms defined
+Each principle that came up this issue, one line each, named. Terms defined
 for the first time go here too.
 
 ## Reading
